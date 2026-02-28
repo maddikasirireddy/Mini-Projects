@@ -34,5 +34,6 @@ function addtask() {
 
     tasklist.appendChild(li);
 
+    taskinput.value = "";
 }
 
