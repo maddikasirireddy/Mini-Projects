@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <input id="input" type="text">
+        <input id="display" readonly>
         <div class="buttons">
-            <button>C</button>
-            <button>%</button>
-            <button>/</button>
+            <button id="C" class="operator" onclick="toclear()">C</button>
+            <button class="operator" onclick="clicktodisplay('%')">%</button>
+            <button class="operator" onclick="clicktodisplay('/')">/</button>
 
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>*</button>
+            <button onclick="clicktodisplay(7)">7</button>
+            <button onclick="clicktodisplay(8)">8</button>
+            <button onclick="clicktodisplay(9)">9</button>
+            <button class="operator" onclick="clicktodisplay('*')">*</button>
 
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>+</button>
+            <button onclick="clicktodisplay(4)">4</button>
+            <button onclick="clicktodisplay(5)">5</button>
+            <button onclick="clicktodisplay(6)">6</button>
+            <button class="operator" onclick="clicktodisplay('+')">+</button>
 
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>-</button>
+            <button onclick="clicktodisplay(1)">1</button>
+            <button onclick="clicktodisplay(2)">2</button>
+            <button onclick="clicktodisplay(3)">3</button>
+            <button class="operator" onclick="clicktodisplay('-')">-</button>
 
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
+            <button onclick="clicktodisplay(0)">0</button>
+            <button onclick="clicktodisplay('.')">.</button>
+            <button class="operator" id="equals" onclick="tocalculate()">=</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
